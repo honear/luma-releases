@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "product": "Luma",
+  "tag": "v0.3.39-beta.1",
+  "version": "0.3.39-beta.1",
+  "prerelease": true,
+  "assets": [
+    {
+      "name": "firmware_v0.3.39-beta.1.bin",
+      "size": 1543616,
+      "sha256": "1ba3230abdd34b5ad47a558815eeaed3a6ce999ab353601fee3a92bfbfa5a465"
+    },
+    {
+      "name": "littlefs_v0.3.39-beta.1.bin",
+      "size": 786432,
+      "sha256": "33fd6d8cfbba329245bae8b9166befbeef3416d3c37dacc3f0ae1d859ca96181"
+    }
+  ],
+  "notes": "Luma v0.3.39-beta.1"
+}
