@@ -1,20 +1,20 @@
 {
   "schema": 1,
   "product": "Luma",
-  "tag": "v0.3.39-beta.1",
-  "version": "0.3.39-beta.1",
+  "tag": "v0.3.39-beta.2",
+  "version": "0.3.39-beta.2",
   "prerelease": true,
   "assets": [
     {
-      "name": "firmware_v0.3.39-beta.1.bin",
-      "size": 1543616,
-      "sha256": "1ba3230abdd34b5ad47a558815eeaed3a6ce999ab353601fee3a92bfbfa5a465"
+      "name": "firmware_v0.3.39-beta.2.bin",
+      "size": 1556704,
+      "sha256": "2a5a531766e23ee20e910c38a2da40e69035505fea6585cbb4f08e85865da935"
     },
     {
-      "name": "littlefs_v0.3.39-beta.1.bin",
+      "name": "littlefs_v0.3.39-beta.2.bin",
       "size": 786432,
-      "sha256": "33fd6d8cfbba329245bae8b9166befbeef3416d3c37dacc3f0ae1d859ca96181"
+      "sha256": "bd9f796d74defd2578b1c9b40dbd6de615b31f00b86bb696babaf62583e369ce"
     }
   ],
-  "notes": "Luma v0.3.39-beta.1"
+  "notes": "Beta build carrying the audit fixes, plus two new recovery paths.\n\n- **Wi-Fi recovery without unplugging.** If the Luma loses its network for\n  10 minutes it now raises its own \"Luma Setup XXXX\" access point and serves\n  a recovery page at `/recover`. Join it, enter the new network, done. It\n  rejoins without rebooting, so the clock survives and schedules keep firing.\n  Asks for the device PIN when one is set, and shares the login lockout \u2014\n  the AP is open, so it must not be a free PIN oracle.\n  *This path has never run on real hardware. It is the main thing to test:\n  change your router password, wait ten minutes, and see if the AP appears.*\n- **Forgot PIN / in-app erase.** Recovery from a lost PIN without a USB cable.\n\n- **Satellites no longer extinguish the reminder they just lit.** Caught in\n  pre-release review: room-targeted reminders (kitchen, office, bedroom,\n  custom) and every one-shot lit correctly and then went dark about five\n  seconds later, on every occurrence, with not..."
 }
